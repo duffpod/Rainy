@@ -21,6 +21,8 @@
 		3B55F796192EAF1D0003A933 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B55F792192EAF1D0003A933 /* AppDelegate.m */; };
 		3B55F797192EAF1D0003A933 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B55F795192EAF1D0003A933 /* MainScene.m */; };
 		3B55F79A192EAF230003A933 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B55F799192EAF230003A933 /* Spaceship.png */; };
+		3B55F79D192EB3410003A933 /* raindrop-original.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B55F79C192EB3410003A933 /* raindrop-original.png */; };
+		3B55F79F192EB3B60003A933 /* raindrop-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B55F79E192EB3B60003A933 /* raindrop-small.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		3B55F794192EAF1D0003A933 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
 		3B55F795192EAF1D0003A933 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
 		3B55F799192EAF230003A933 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		3B55F79C192EB3410003A933 /* raindrop-original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "raindrop-original.png"; sourceTree = "<group>"; };
+		3B55F79E192EB3B60003A933 /* raindrop-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "raindrop-small.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 		3B55F798192EAF230003A933 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3B55F79E192EB3B60003A933 /* raindrop-small.png */,
+				3B55F79C192EB3410003A933 /* raindrop-original.png */,
 				3B55F799192EAF230003A933 /* Spaceship.png */,
 			);
 			path = Resources;
@@ -284,8 +290,10 @@
 				3B55F79A192EAF230003A933 /* Spaceship.png in Resources */,
 				3B55F774192EAEB10003A933 /* Images.xcassets in Resources */,
 				3B55F762192EAEB10003A933 /* InfoPlist.strings in Resources */,
+				3B55F79D192EB3410003A933 /* raindrop-original.png in Resources */,
 				3B55F768192EAEB10003A933 /* Credits.rtf in Resources */,
 				3B55F76A192EAEB10003A933 /* MainMenu.xib in Resources */,
+				3B55F79F192EB3B60003A933 /* raindrop-small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

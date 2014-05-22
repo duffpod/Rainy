@@ -8,45 +8,52 @@
 
 #import "MainScene.h"
 
-@implementation MainScene
+@interface MainScene()
 
-- (id)initWithSize:(CGSize)size {
-    if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
-        
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
-        
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
-        
-        [self addChild:myLabel];
-    }
-    return self;
-}
+@end
+
+@implementation MainScene
 
 - (void)mouseDown:(NSEvent *)theEvent {
      /* Called when a mouse click occurs */
     
     CGPoint location = [theEvent locationInNode:self];
     
-    SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
+    [self spawnRaindropAt:location];
     
-    sprite.position = location;
-    sprite.scale = 0.5;
-    
-    SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-    
-    [sprite runAction:[SKAction repeatActionForever:action]];
-    
-    [self addChild:sprite];
 }
 
 - (void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+    
+    NSInteger x = [self randomXFrom:0 to:self.size.width];
+    
+    [self spawnRaindropAt:CGPointMake(x, self.size.height + 4)];
+    
+}
+
+- (void)spawnRaindropAt:(CGPoint)location {
+    
+    __block SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"raindrop-small"];
+    
+    sprite.position = location;
+    
+    CGFloat dropLocation = 0 - sprite.size.height / 2;
+    
+    SKAction *action = [SKAction moveToY:dropLocation duration:0.5f];
+    
+    [sprite runAction:action completion:^{
+        [sprite removeFromParent];
+    }];
+    
+    [self addChild:sprite];
+    
+}
+
+- (NSInteger)randomXFrom:(NSInteger)from to:(NSInteger)to {
+    
+    return (arc4random_uniform((u_int32_t)to) % (to - from)) + from;
+    
 }
 
 @end

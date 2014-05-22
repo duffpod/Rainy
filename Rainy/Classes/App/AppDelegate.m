@@ -16,15 +16,15 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     /* Pick a size for the scene */
-    SKScene *scene = [MainScene sceneWithSize:CGSizeMake(1024, 768)];
+    SKScene *scene = [MainScene sceneWithSize:self.view.frame.size];
 
     /* Set the scale mode to scale to fit the window */
     scene.scaleMode = SKSceneScaleModeAspectFit;
 
-    [self.skView presentScene:scene];
+    [self.view presentScene:scene];
 
-    self.skView.showsFPS = YES;
-    self.skView.showsNodeCount = YES;
+    self.view.showsFPS = YES;
+    self.view.showsNodeCount = YES;
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {

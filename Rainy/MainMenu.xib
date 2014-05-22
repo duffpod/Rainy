@@ -13,7 +13,7 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="skView" destination="Wjy-UC-qi6" id="jQd-N8-ub3"/>
+                <outlet property="view" destination="Wjy-UC-qi6" id="CdS-IJ-cuE"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="NDT-MH-3nK"/>
             </connections>
         </customObject>
@@ -106,14 +106,15 @@
         <window title="Rainy" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
-            <rect key="contentRect" x="0.0" y="0.0" width="800" height="600"/>
+            <rect key="contentRect" x="0.0" y="0.0" width="1024" height="600"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <value key="minSize" type="size" width="1024" height="600"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                <rect key="frame" x="0.0" y="0.0" width="1024" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView id="Wjy-UC-qi6" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </customView>
                 </subviews>

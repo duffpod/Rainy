@@ -12,6 +12,6 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet SKView *skView;
+@property (assign) IBOutlet SKView *view;
 
 @end
