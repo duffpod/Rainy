@@ -20,6 +20,7 @@
 
     /* Set the scale mode to scale to fit the window */
     scene.scaleMode = SKSceneScaleModeAspectFit;
+    scene.backgroundColor = [SKColor colorWithRed:0.12 green:0.14 blue:0.15 alpha:1];
 
     [self.view presentScene:scene];
 

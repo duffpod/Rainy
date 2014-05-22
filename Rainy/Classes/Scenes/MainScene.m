@@ -10,9 +10,25 @@
 
 @interface MainScene()
 
+@property (nonatomic, assign) NSInteger intensity;
+
 @end
 
 @implementation MainScene
+
+- (instancetype)initWithSize:(CGSize)size {
+    
+    self = [super initWithSize:size];
+    
+    if(self) {
+        
+        self.intensity = 3;
+        
+    }
+    
+    return self;
+    
+}
 
 - (void)mouseDown:(NSEvent *)theEvent {
      /* Called when a mouse click occurs */
@@ -26,9 +42,21 @@
 - (void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     
-    NSInteger x = [self randomXFrom:0 to:self.size.width];
+    for(int i = 0;i < self.intensity;i++) {
+        
+        [self rain];
+        
+    }
     
-    [self spawnRaindropAt:CGPointMake(x, self.size.height + 4)];
+}
+
+- (void)rain {
+    
+    NSInteger x = [self randomFrom:0 to:self.size.width];
+    NSInteger startY = self.size.height + 4;
+    NSInteger y = [self randomFrom:startY to:startY + 20];
+    
+    [self spawnRaindropAt:CGPointMake(x, y)];
     
 }
 
@@ -50,7 +78,7 @@
     
 }
 
-- (NSInteger)randomXFrom:(NSInteger)from to:(NSInteger)to {
+- (NSInteger)randomFrom:(NSInteger)from to:(NSInteger)to {
     
     return (arc4random_uniform((u_int32_t)to) % (to - from)) + from;
     
